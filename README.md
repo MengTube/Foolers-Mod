@@ -1,4 +1,6 @@
 # Foolers Mod
+# Roles
+- [Jester](#Jester)
 # Releases & Compatibility:
 <table>
     <th>Among Us Version</th>
@@ -39,6 +41,9 @@ This mod is also available on:
 If you have any issues, or if you found a bug, or if you have suggestions, regarding the Extra Colors Mod, feel free to [raise an issue](https://github.com/MengTube/Extra-Colors-Mod/issues/new) through GitHub.\
 You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help and support.
 
+# Roles:
+#Jester
+    
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
 [Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
