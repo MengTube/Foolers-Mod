@@ -1,4 +1,4 @@
-# Foolers-Mod
+# Foolers Mod
 # Releases & Compatibility:
 <table>
     <th>Among Us Version</th>
