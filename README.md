@@ -1,16 +1,11 @@
 # Foolers Mod
 # Roles
 - [Jester](#jester)
+
 # Releases & Compatibility:
-<table>
-    <th>Among Us Version</th>
-    <th>Mod Version</th>
-    <th>Link</th>
-    <tr>
-    <td>v2021.6.30</td>
-    <td>v1.0.0</td>
-    <td><a href="Download Link">Download</></td>
-</table>
+| Mod Version | Among Us Version | Download Link |
+|:-:|:-:|:-:|
+|v1.0.0|v2021.6.30-v2021.7.20|Download|
 
 # Installation:
 ## Requirements:
@@ -45,17 +40,9 @@ You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help an
 ## Jester
 The Jester has no tasks and wins after getting voted out.
 ## Game Options
-<table>
-    <th>Setting Name</th>
-    <th>Description</th>
-    <th>Range</th>
-    <th>Default</th>
-    <tr>
-    <td>Jester Amount</td>
-    <td>The Amount of Jesters added to the game</td>
-    <td>1-Max</td>
-    <td>1</td>
-</table>
+| Settings | Description | Range | Default |
+|:-:|:-:|:-:|:-:|
+|Jester Amount|Amount of Jesters in the game|0-Max|1|
     
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
@@ -64,5 +51,5 @@ The Jester has no tasks and wins after getting voted out.
 [Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod
 
 #
-<p align="center"> This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
+<p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
 <p align="center">© Innersloth LLC.</p>
