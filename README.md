@@ -34,7 +34,7 @@ This mod is also available on:
 - [Mod Manager](https://mm.matux.fr/)
 
 # Issues/Bugs/Suggestions:
-If you have any issues, or if you found a bug, or if you have suggestions, regarding the Extra Colors Mod, feel free to [raise an issue](https://github.com/MengTube/Extra-Colors-Mod/issues/new) through GitHub.\
+If you have any issues, or if you found a bug, or if you have suggestions, regarding the Extra Colors Mod, feel free to [raise an issue](https://github.com/MengTube/Foolers-Mod/issues/new) through GitHub.\
 You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help and support.
 
 # Roles:
