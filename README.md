@@ -1,6 +1,6 @@
 # Foolers Mod
 # Roles:
-2- [Jester](#jester)
+- [Jester](#jester)
 - [Trickster](#trickster)
 - [Joker](#joker)
 - [Troll](#troll)
