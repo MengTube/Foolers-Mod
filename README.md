@@ -1,12 +1,13 @@
 # Foolers-Mod
+# Releases & Compatibility:
 <table>
     <th>Among Us Version</th>
     <th>Mod Version</th>
     <th>Link</th>
     <tr>
     <td>v2021.6.30</td>
-    <td>v1.1.1</td>
-    <td><a href="https://github.com/MengTube/Extra-Colors-Mod/releases/download/v1.1.1/Extra.Colors.Mod.v1.1.1.zip">Download</></td>
+    <td>v1.0.0</td>
+    <td><a href="Download Link">Download</></td>
 </table>
 
 # Installation:
@@ -41,6 +42,8 @@ You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help an
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
 [Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
+[PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
+[Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
 
 #
 <p align="center"> This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
