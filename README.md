@@ -1,6 +1,9 @@
 # Foolers Mod
 # Roles
 - [Jester](#jester)
+- [Trickster](#trickster)
+- [Joker](#joker)
+- [Troll](#troll)
 
 # Releases & Compatibility:
 | Mod Version | Among Us Version | Download Link |
@@ -15,7 +18,7 @@
   - Itch.io Version
 
 ## Installation Guide:
-1. [Download](https://github.com/MengTube/Extra-Colors-Mod/releases/download/v1.1.0/Extra.Colors.Mod.v1.1.1.zip) Extra Colors Mod.
+1. [Download](https://github.com/MengTube/Extra-Colors-Mod/releases/download/v1.1.0/Extra.Colors.Mod.v1.1.1.zip) Foolers Mod.
 2. Extract the `.zip` file.
 3. Make a copy of your Among Us (Optional).
 4. Copy the contents inside the extracted file.
@@ -23,7 +26,7 @@
 6. Launch your Among Us. It might take a while to launch.
 
 Once the game is successfully launched with the mod, you will see these things:\
-<img src="Images (v1.1.0)/Home Menu.png">\
+<img src="Images (v1.1.0)/Home Menu.png">
 
 # Other Places To Get This Mod
 This mod is also available on:
@@ -36,11 +39,18 @@ You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help an
 
 # Roles:
 ## Jester
-The Jester has no tasks and wins after getting voted out.
-## Game Options
+The Jester has no tasks to do. The Jester wins after getting voted out.
+### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
 |Jester Amount|Amount of Jesters in the game|0-Max|1|
+
+## Trickster
+The Trickster has no tasks to do. The Jester wins after getting killed.
+### Game Options:
+| Settings | Description | Range | Default |
+|:-:|:-:|:-:|:-:|
+|Trickster Amount|Amount of Tricksters in the game|0-Max|1|
     
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
