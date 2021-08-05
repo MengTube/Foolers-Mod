@@ -43,31 +43,31 @@ The Jester has no tasks to do. The Jester wins after getting voted out.
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Jester Amount|Amount of Jesters in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+|Jester Amount|Amount of Jesters in the game|0 - Max <br />(Depends on number of players and Impostors)|1|
 
 ## Trickster
 The Trickster has no tasks to do. The Trickster wins after getting killed.
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Trickster Amount|Amount of Tricksters in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+|Trickster Amount|Amount of Tricksters in the game|0 - Max <br />(Depends on number of players and Impostors)|1|
 
 ## Joker
 The Joker wins if they complete all of their tasks before dying
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Joker Amount|Amount of Jokers in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+|Joker Amount|Amount of Jokers in the game|0 - Max <br />(Depends on number of players and Impostors)|1|
 
 ## Troll
 The Troll has no tasks and can't win the game. However, the Troll has 2 special abilities that they can use both alive and dead
 ### Troll Abilities:
-Confuse: Changes all player's name, hat, skin and pet
+Confuse: Changes all player's name, hat, skin and pet\
 Meeting: Makes a random player who is not a Troll call an emergency meeting
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Troll Amount|Amount of Trolls in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+|Troll Amount|Amount of Trolls in the game|0 - Max <br />(Depends on number of players and Impostors)|1|
 |Confuse Cooldown|The cooldown of the Troll's special Confuse button|40s - 60s|50s|
 |Meeting Cooldown|The cooldown of the Troll's specal Meeting Button|40s - 60s|50s|
     
@@ -75,7 +75,8 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
 [Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
 [PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
-[Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod
+[Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
+[C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod
 
 #
 <p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
