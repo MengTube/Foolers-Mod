@@ -43,14 +43,33 @@ The Jester has no tasks to do. The Jester wins after getting voted out.
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Jester Amount|Amount of Jesters in the game|0-Max|1|
+|Jester Amount|Amount of Jesters in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
 
 ## Trickster
-The Trickster has no tasks to do. The Jester wins after getting killed.
+The Trickster has no tasks to do. The Trickster wins after getting killed.
 ### Game Options:
 | Settings | Description | Range | Default |
 |:-:|:-:|:-:|:-:|
-|Trickster Amount|Amount of Tricksters in the game|0-Max|1|
+|Trickster Amount|Amount of Tricksters in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+
+## Joker
+The Joker wins if they complete all of their tasks before dying
+### Game Options:
+| Settings | Description | Range | Default |
+|:-:|:-:|:-:|:-:|
+|Joker Amount|Amount of Jokers in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+
+## Troll
+The Troll has no tasks and can't win the game. However, the Troll has 2 special abilities that they can use both alive and dead
+### Troll Abilities:
+Confuse: Changes all player's name, hat, skin and pet
+Meeting: Makes a random player who is not a Troll call an emergency meeting
+### Game Options:
+| Settings | Description | Range | Default |
+|:-:|:-:|:-:|:-:|
+|Troll Amount|Amount of Trolls in the game|0 - Max <br />(Depends on number of players an Impostors)|1|
+|Confuse Cooldown|The cooldown of the Troll's special Confuse button|40s - 60s|50s|
+|Meeting Cooldown|The cooldown of the Troll's specal Meeting Button|40s - 60s|50s|
     
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
