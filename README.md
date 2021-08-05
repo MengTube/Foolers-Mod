@@ -25,9 +25,6 @@
 5. Paste it in your Among Us directory.
 6. Launch your Among Us. It might take a while to launch.
 
-Once the game is successfully launched with the mod, you will see these things:\
-<img src="Images (v1.1.0)/Home Menu.png">
-
 # Other Places To Get This Mod
 This mod is also available on:
 - [AmodsUs](https://amodsus.com/resources/extra-colors-mod.165/)
