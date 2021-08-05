@@ -1,6 +1,6 @@
 # Foolers Mod
 # Roles
-- [Jester](#Jester)
+- [Jester](#jester)
 # Releases & Compatibility:
 <table>
     <th>Among Us Version</th>
