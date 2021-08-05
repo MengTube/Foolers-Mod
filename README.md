@@ -24,8 +24,6 @@
 
 Once the game is successfully launched with the mod, you will see these things:\
 <img src="Images (v1.1.0)/Home Menu.png">\
-<img src="Images (v1.1.0)/In-game.png">\
-<img src="Images (v1.1.0)/Mod.png">
 
 # Other Places To Get This Mod
 This mod is also available on:
