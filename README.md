@@ -1,6 +1,6 @@
 # Foolers Mod
 # Roles
-* [Jester](#jester)
+- [Jester](#jester)
 # Releases & Compatibility:
 <table>
     <th>Among Us Version</th>
@@ -42,7 +42,20 @@ If you have any issues, or if you found a bug, or if you have suggestions, regar
 You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help and support.
 
 # Roles:
-#Jester
+## Jester
+The Jester has no tasks and wins after getting voted out.
+## Game Options
+<table>
+    <th>Setting Name</th>
+    <th>Description</th>
+    <th>Range</th>
+    <th>Default</th>
+    <tr>
+    <td>Jester Amount</td>
+    <td>The Amount of Jesters added to the game</td>
+    <td>1-Max</td>
+    <td>1</td>
+</table>
     
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
