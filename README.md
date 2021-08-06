@@ -25,9 +25,6 @@
 5. Paste it in your Among Us directory.
 6. Launch your Among Us. It might take a while to launch.
 
-# Other Places To Get This Mod
-This mod is also available on:
-
 # Issues/Bugs/Suggestions:
 If you have any issues, or if you found a bug, or if you have suggestions, regarding the Foolers Mod, feel free to [raise an issue](https://github.com/MengTube/Foolers-Mod/issues/new) through GitHub.\
 You can also join my [Discord Server](https://discord.gg/tqR4uJTbcz) for help and support.
