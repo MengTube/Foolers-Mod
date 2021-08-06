@@ -27,8 +27,6 @@
 
 # Other Places To Get This Mod
 This mod is also available on:
-- [AmodsUs](https://amodsus.com/resources/extra-colors-mod.165/)
-- [Mod Manager](https://mm.matux.fr/)
 
 # Issues/Bugs/Suggestions:
 If you have any issues, or if you found a bug, or if you have suggestions, regarding the Foolers Mod, feel free to [raise an issue](https://github.com/MengTube/Foolers-Mod/issues/new) through GitHub.\
@@ -74,6 +72,7 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 [PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
 [Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
 [C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod
+[Ma
 
 #
 <p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
