@@ -70,6 +70,7 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
 [Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
 [PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
+[Reactor Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) - Used for creating custom options\
 [Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
 [C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod\
 [Matux](https://matux.fr) - Allowing me to use his custom Among Us server
