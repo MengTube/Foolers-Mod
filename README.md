@@ -18,7 +18,7 @@
   - Itch.io Version
 
 ## Installation Guide:
-1. [Download](https://github.com/MengTube/Extra-Colors-Mod/releases/download/v1.1.0/Extra.Colors.Mod.v1.1.1.zip) Foolers Mod.
+1. [Download](https://github.com/MengTube/Extra-Colors-Mod/releases/download/v1.1.0/Extra.Colors.Mod.v1.1.1.zip) the Foolers Mod.
 2. Extract the `.zip` file.
 3. Make a copy of your Among Us (Optional).
 4. Copy the contents inside the extracted file.
