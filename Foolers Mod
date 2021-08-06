@@ -1,0 +1,462 @@
+namespace FoolersMod
+{
+    enum CustomRPC
+    {
+        ConfuseAbility = 50
+    }
+}
+
+using BepInEx;
+using BepInEx.IL2CPP;
+using Essentials.Options;
+using HarmonyLib;
+using PeasAPI;
+using PeasAPI.Components;
+using Reactor;
+using UnityEngine;
+
+namespace FoolersMod
+{
+    [BepInPlugin(Id)]
+    [BepInProcess("Among Us.exe")]
+    [BepInDependency(ReactorPlugin.Id)]
+    [BepInDependency(PeasApi.Id)]
+    public class FoolersModPlugin : BasePlugin
+    {
+        public const string Id = "mengtube.amongus.foolersmod";
+
+        public Harmony Harmony { get; } = new Harmony(Id);
+
+        public static CustomOptionHeader FoolersOptions = CustomOption.AddHeader("<color=#2294E6>Foolers Options:</color>");
+
+        public static CustomOptionHeader Jester = CustomOption.AddHeader("<color=#ff00ff>Jester:</color>");
+        public static CustomNumberOption JesterAmount = CustomOption.AddNumber("JesterAmount", "Jester Amount", true, 1, 0, 3, 1);
+
+        public static CustomOptionHeader Trickster = CustomOption.AddHeader("<color=#d400ff>Trickster:</color>");
+        public static CustomNumberOption TricksterAmount = CustomOption.AddNumber("TricksterAmount", "Trickster Amount", true, 1, 0, 3, 1);
+
+        public static CustomOptionHeader Joker = CustomOption.AddHeader("<color=#00a6ff>Joker:</color>");
+        public static CustomNumberOption JokerAmount = CustomOption.AddNumber("JokerAmount", "Joker Amount", true, 1, 0, 3, 1);
+
+        public static CustomOptionHeader Troll = CustomOption.AddHeader("<color=#00ff00>Troll:</color>");
+        public static CustomNumberOption TrollAmount = CustomOption.AddNumber("TrollAmount", "Troll Amount", true, 1, 0, 3, 1);
+        public static CustomNumberOption ConfuseCooldown = CustomOption.AddNumber("ConfuseCooldown", "Confuse Cooldown", true, 50, 40, 60, 5);
+        public static CustomNumberOption MeetingCooldown = CustomOption.AddNumber("MeetingCooldown", "Meeting Cooldown", true, 50, 40, 60, 5);
+        public override void Load()
+        {
+            Watermark.VersionText = "\n<color=#00FA9A>Foolers Mod</color> \n<color=#FFD11AFF>By MengTube</color> \n<color=#18d5b9>Button Art By C.A 100</color>";
+            Watermark.VersionTextOffset = new Vector3(0f, -0.8f, 0f);
+            Watermark.PingText = "\nMade By <color=#FFD11AFF>MengTube</color> \n<color=#2eadff>youtube.com/mengtube</color>";
+            Watermark.PingTextOffset = new Vector3(-1.4f, 0f, 0f);
+            PeasApi.AccountTabOffset = new Vector3(0f, -1.15f, 0f);
+            PeasApi.AccountTabOnlyChangesName = true;
+
+            CustomServerManager.RegisterServer("matux.fr", "152.228.160.91", 22023);
+
+            CustomOption.ShamelessPlug = false;
+            CustomOption.HudTextScroller = false;
+
+            RegisterCustomRoleAttribute.Register(this);
+
+            Harmony.PatchAll();
+        }
+    }
+}
+
+
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+        <GameVersion>2021.6.30</GameVersion>
+		<Version>1.0.0</Version>
+        <Description>An Among Us mod that adds 4 Foolers into the game</Description>
+        <Authors>MengTube</Authors>
+    </PropertyGroup>
+
+    <Target Name="Copy" AfterTargets="Build">
+        <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFiles="$(AmongUs)/BepInEx/plugins/$(AssemblyName)-$(GameVersion).dll" />
+        <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFiles="../build/$(AssemblyName)-$(GameVersion).dll" />
+    </Target>
+
+    <ItemGroup>
+        <Reference Include="$(AmongUs)\BepInEx\core\*.dll">
+            <Private>false</Private>
+        </Reference>
+        
+        <Reference Include="$(AmongUs)\BepInEx\unhollowed\*.dll">
+            <Private>false</Private>
+        </Reference>
+        
+        <None Remove="Resources\Confuse.png" />
+        
+        <None Remove="Resources\Transform.png" />
+
+        <Reference Remove="$(AmongUs)\BepInEx\unhollowed\netstandard.dll;$(AmongUs)\BepInEx\unhollowed\Newtonsoft.Json.dll" />
+
+        <EmbeddedResource Include="Resources\Confuse.png" />
+        
+        <EmbeddedResource Include="Resources\Meeting.png" />
+
+		<Reference Include="$(AmongUs)\BepInEx\plugins\Reactor.dll" />
+        
+		<Reference Include="$(AmongUs)\BepInEx\plugins\PeasAPI.dll" />
+			
+		<Reference Include="Essentials">
+		  <HintPath>$(AmongUs)\BepInEx\plugins\Essentials-2021.6.30s.dll</HintPath>
+		</Reference>
+    </ItemGroup>
+</Project>
+using BepInEx.IL2CPP;
+using HarmonyLib;
+using PeasAPI;
+using PeasAPI.Components;
+using PeasAPI.CustomEndReason;
+using PeasAPI.Roles;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace FoolersMod
+{
+    [RegisterCustomRole]
+    class Jester : BaseRole
+    {
+        public Jester(BasePlugin plugin) : base(plugin) { }
+
+        public override string Name => "Jester";
+
+        public override string Description => "Get voted out to win";
+
+        public override string TaskText => "Get voted out to win!";
+
+        public override bool HasToDoTasks => false;
+
+        public override Color Color => new Color(255f / 255f, 0f / 255f, 255f / 255f);
+
+        public override int Limit => (int)FoolersModPlugin.JesterAmount.GetValue();
+
+        public override Team Team => Team.Alone;
+
+        public override Visibility Visibility => Visibility.NoOne;
+
+        public override void OnGameStart()
+        {
+
+        }
+
+        public override void OnUpdate()
+        {
+
+        }
+
+        public override void OnMeetingUpdate(MeetingHud meeting)
+        {
+
+        }
+
+        [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.Exiled))]
+        class ExiledPatch
+        {
+            public static void Prefix(PlayerControl __instance)
+            {
+                if (__instance.IsRole<Jester>())
+                {
+                    var winners = new List<byte>();
+                    foreach (var player in PlayerControl.AllPlayerControls)
+                    {
+                        if (player.IsRole<Jester>())
+                            winners.Add(player.PlayerId);
+                    }
+
+                    new CustomEndReason(__instance);
+                }
+            }
+        }
+    }
+}
+
+using BepInEx.IL2CPP;
+using PeasAPI;
+using PeasAPI.Components;
+using PeasAPI.CustomEndReason;
+using PeasAPI.Roles;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace FoolersMod
+{
+    [RegisterCustomRole]
+    class Joker : BaseRole
+    {
+        public Joker(BasePlugin plugin) : base(plugin) { }
+
+        public override string Name => "Joker";
+
+        public override string Description => "Complete your tasks before death to win";
+
+        public override string TaskText => "Complete your tasks before death to win!";
+
+        public override bool HasToDoTasks => true;
+
+        public override Color Color => new Color(0f / 255f, 167f / 255f, 255f / 255f);
+
+        public override int Limit => (int)FoolersModPlugin.JokerAmount.GetValue();
+
+        public override Team Team => Team.Alone;
+
+        public override Visibility Visibility => Visibility.NoOne;
+
+        public override void OnGameStart()
+        {
+            
+        }
+
+        public override void OnUpdate()
+        {
+            if (PeasApi.GameStarted)
+            {
+                if (!PlayerControl.LocalPlayer.Data.IsDead)
+                {
+                    foreach (var member in Members)
+                    {
+                        if (PlayerTask.AllTasksCompleted(member.GetPlayer()))
+                        {
+                            new CustomEndReason(member.GetPlayer());
+                        }
+                    }
+                }
+            }
+        }
+
+        public override void OnMeetingUpdate(MeetingHud meeting)
+        {
+
+        }
+
+        class AllTaskCompleted
+        {
+            public static void Prefix(PlayerControl __instance)
+            {
+                if (__instance.IsRole<Joker>())
+                {
+                    if (PlayerControl.LocalPlayer.Data.IsDead)
+                    {
+                        if (PlayerTask.AllTasksCompleted(__instance))
+                        {
+                            var winners = new List<byte>();
+                            foreach (var player in PlayerControl.AllPlayerControls)
+                            {
+                                if (player.IsRole<Joker>())
+                                    winners.Add(player.PlayerId);
+                            }
+                        }
+                    }
+
+                    new CustomEndReason(__instance);
+                }
+            }
+        }
+    }
+}
+
+using BepInEx.IL2CPP;
+using HarmonyLib;
+using PeasAPI;
+using PeasAPI.Components;
+using PeasAPI.CustomEndReason;
+using PeasAPI.Roles;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace FoolersMod
+{
+    [RegisterCustomRole]
+    class Trickster : BaseRole
+    {
+        public Trickster(BasePlugin plugin) : base(plugin) { }
+
+        public override string Name => "Trickster";
+
+        public override string Description => "Get killed to win";
+
+        public override string TaskText => "Get killed to win!";
+
+        public override bool HasToDoTasks => false;
+
+        public override Color Color => new Color(211f / 255f, 0f / 255f, 255f / 255f);
+
+        public override int Limit => (int)FoolersModPlugin.TricksterAmount.GetValue();
+
+        public override Team Team => Team.Alone;
+
+        public override Visibility Visibility => Visibility.NoOne;
+
+        public override void OnGameStart()
+        {
+
+        }
+
+        public override void OnUpdate()
+        {
+
+        }
+
+        public override void OnMeetingUpdate(MeetingHud meeting)
+        {
+
+        }
+
+        [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.Die))]
+        class IsDeadPatch
+        {
+            public static void Prefix(PlayerControl __instance)
+            {
+                if (__instance.IsRole<Trickster>())
+                {
+                    if (!PlayerControl.LocalPlayer.Data.IsDead != PlayerControl.LocalPlayer) return;
+                    {
+                        var winners = new List<byte>();
+                        foreach (var player in PlayerControl.AllPlayerControls)
+                        {
+                            if (player.IsRole<Trickster>())
+                                winners.Add(player.PlayerId);
+                        }
+
+                        new CustomEndReason(__instance);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+using BepInEx.IL2CPP;
+using Hazel;
+using PeasAPI;
+using PeasAPI.Components;
+using PeasAPI.Roles;
+using PeasAPI.CustomButtons;
+using System.Reflection;
+using System.Collections.Generic;
+using Reactor;
+using Reactor.Networking;
+using UnityEngine;
+
+namespace FoolersMod
+{
+    [RegisterCustomRole]
+    class Troll : BaseRole
+    {
+        public Troll(BasePlugin plugin) : base(plugin) { }
+
+        public override string Name => "Troll";
+
+        public override string Description => "Troll everyone and ruin their day";
+
+        public override string TaskText => "Troll everyone and ruin their day!";
+
+        public override bool HasToDoTasks => false;
+
+        public override Color Color => new Color(0f / 255f, 255f / 255f, 0f / 255f);
+
+        public override int Limit => (int)FoolersModPlugin.TrollAmount.GetValue();
+
+        public override Team Team => Team.Alone;
+
+        public override Visibility Visibility => Visibility.NoOne;
+
+        public RoleButton ConfuseButton;
+
+        public RoleButton MeetingButton;
+
+        public override void OnGameStart()
+        {
+            ConfuseButton = new RoleButton(() =>
+            {
+                foreach (var allPlayers in PlayerControl.AllPlayerControls)
+                {
+                    string[] playerName = new string[] { "i said i", "lol", "yo mama", "2thic2vent", "dababy", "yeah boiii", "demon", "Freddy", "Lanky", "carrot", "jesse", "haha i", "moon", "Pennywise", "Ghost420", "fuzzypear", "ur mom", "Shadow", "king", "SlimButFat" };
+                    string randomName = playerName[Random.Range(0, playerName.Length)];
+
+                    allPlayers.SetName(randomName, true);
+                    allPlayers.SetColor(Random.Range(0, 18));
+                    allPlayers.SetHat((uint)Random.Range(1, 115), allPlayers.Data.ColorId);
+                    allPlayers.SetSkin((uint)Random.Range(1, 19));
+                    allPlayers.SetPet((uint)Random.Range(1, 12));
+
+                    Rpc<ConfuseAbilityRpc>.Instance.Send(new ConfuseAbilityRpc.Data(PlayerControl.LocalPlayer));
+                }
+            }, FoolersModPlugin.ConfuseCooldown.GetValue(),
+            Utility.CreateSprite("FoolersMod.Resources.Confuse.png", Assembly.GetExecutingAssembly()), new Vector2(-0.1f, 1.25f), true, this);
+
+            MeetingButton = new RoleButton(() =>
+            {
+                var notTroll = new List<PlayerControl>();
+
+                foreach (var player in PlayerControl.AllPlayerControls)
+                {
+                    if (!player.IsRole<Troll>())
+                        notTroll.Add(player);
+                }
+
+                notTroll[Random.Range(0, notTroll.Count)].CmdReportDeadBody(null);
+            }, FoolersModPlugin.MeetingCooldown.GetValue(), Utility.CreateSprite("FoolersMod.Resources.Meeting.png", Assembly.GetExecutingAssembly()), Vector2.zero, true, this);
+        }
+
+        public override void OnUpdate()
+        {
+
+        }
+
+        public override void OnMeetingUpdate(MeetingHud meeting)
+        {
+
+        }
+    }
+
+    [RegisterCustomRpc((uint)CustomRPC.ConfuseAbility)]
+    public class ConfuseAbilityRpc : PlayerCustomRpc<FoolersModPlugin, ConfuseAbilityRpc.Data>
+    {
+        public ConfuseAbilityRpc(FoolersModPlugin plugin, uint id) : base(plugin, id)
+        {
+        }
+
+        public readonly struct Data
+        {
+            public readonly PlayerControl Player;
+
+            public Data(PlayerControl player)
+            {
+                Player = player;
+            }
+        }
+
+        public override RpcLocalHandling LocalHandling => RpcLocalHandling.None;
+
+        public override void Write(MessageWriter writer, Data data)
+        {
+            writer.Write(data.Player.PlayerId);
+        }
+
+        public override Data Read(MessageReader reader)
+        {
+            return new Data(reader.ReadByte().GetPlayer());
+        }
+
+        public override void Handle(PlayerControl innerNetObject, Data data)
+        {
+            foreach (var allPlayers in PlayerControl.AllPlayerControls)
+            {
+                string[] playerName = new string[] { "AlexAce", "Dluto", "Noahh", "Ben", "DillyzThe1", "Meddygon", "Flame", "DepVigil", "ScoutMeyer", "WesNatsFan", "Moonfish", "among us", "CattoMeow", "JJO", "Flynn", "Pigsrule", "not thea", "Crayden", "Shadow", "PastorNick" };
+                string randomName = playerName[Random.Range(0, playerName.Length)];
+
+                allPlayers.SetName(randomName, true);
+                allPlayers.SetColor(Random.Range(0, 18));
+                allPlayers.SetHat((uint)Random.Range(1, 115), allPlayers.Data.ColorId);
+                allPlayers.SetSkin((uint)Random.Range(1, 19));
+                allPlayers.SetPet((uint)Random.Range(1, 12));
+            }
+        }
+    }
+}
