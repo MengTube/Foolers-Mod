@@ -8,7 +8,7 @@
 # Releases & Compatibility:
 | Mod Version | Among Us Version | Download Link |
 |:-:|:-:|:-:|
-|v1.0.0|v2021.6.30 - v2021.7.20|<a href="https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.0/Foolers.Mod.v1.0.0.zip">Download|
+|v1.0.0|v2021.6.30 - v2021.7.20|<a href="https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.1/Foolers.Mod.v1.0.1.zip">Download|
 
 # Installation:
 ## Requirements:
@@ -18,7 +18,7 @@
   - Itch.io Version
 
 ## Installation Guide:
-1. [Download](https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.0/Foolers.Mod.v1.0.0.zip) the Foolers Mod.
+1. [Download](https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.1/Foolers.Mod.v1.0.1.zip) the Foolers Mod.
 2. Extract the `.zip` file.
 3. Make a copy of your Among Us (Optional).
 4. Copy the contents inside the extracted file.
