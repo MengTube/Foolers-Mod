@@ -8,7 +8,8 @@
 # Releases & Compatibility:
 | Mod Version | Among Us Version | Download Link |
 |:-:|:-:|:-:|
-|v1.0.0|v2021.6.30 - v2021.7.20|<a href="https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.1/Foolers.Mod.v1.0.1.zip">Download|
+|v1.0.0|v2021.6.30 - v2021.7.20|<a href="https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.0/Foolers.Mod.v1.0.0.zip">Download|
+|v1.0.1|v2021.6.30 - v2021.7.20|<a href="https://github.com/MengTube/Foolers-Mod/releases/download/v1.0.1/Foolers.Mod.v1.0.1.zip">Download|
 
 # Installation:
 ## Requirements:
