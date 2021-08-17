@@ -80,7 +80,7 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 - Read the license before using the mod or the source code
 - Using the mod
   - Do not cover or remove the in game credits
-  - If you're making a video of this mod, please include the mod link somewhere noticeable
+  - If you're making a video on this mod, please include the mod link somewhere noticeable
 - Using the source code
   - If you release it publicly, make sure to credit me
   
