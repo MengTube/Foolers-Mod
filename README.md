@@ -76,6 +76,13 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 [C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod\
 [Matux](https://matux.fr) - Allowing me to use his custom Among Us server
 
+# Using the mod or the source code
+- Read the license before using the mod or the source code
+- Using the mod
+  - Do not cover or remove the in game credits
+- Using the source code
+  - If you release it publicly, make sure to credit me
+  
 #
 <p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
 <p align="center">© Innersloth LLC.</p>
