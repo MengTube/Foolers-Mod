@@ -73,7 +73,7 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
   - Do not cover or remove the in-game credits
 - Using the source code
   - Do not republish this mod
-  - If you publish a modified version of it, make sure to credit me
+  - If you publish a modified version of this mod, make sure to credit me
   
 # Credits:
 [BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
