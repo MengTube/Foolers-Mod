@@ -66,15 +66,6 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 |Troll Amount|Amount of Trolls in the game|0 - Max <br />(Depending on number of players and Impostors)|1|
 |Confuse Cooldown|The cooldown of the Troll's special Confuse button|40s - 60s|50s|
 |Meeting Cooldown|The cooldown of the Troll's specal Meeting Button|40s - 60s|50s|
-    
-# Credits:
-[BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
-[Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
-[PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
-[Reactor Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) - Used for creating custom options\
-[Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
-[C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod\
-[Matux](https://matux.fr) - Allowing me to use his custom Among Us server
 
 # Using the mod or the source code
 - Read the license before using the mod or the source code
@@ -84,6 +75,15 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
   - Do not republish this mod
   - If you publish a modified version of it, make sure to credit me
   
+# Credits:
+[BepInEx](https://github.com/NuclearPowered/BepInEx) - .NET plugin framework used for creation of this mod\
+[Reactor](https://github.com/NuclearPowered/Reactor) - Modding framework used for creating this mod\
+[PeasAPI](https://github.com/Peasplayer/PeasAPI) - The API used to simplify the creation of this mod\
+[Reactor Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) - Used for creating custom options\
+[Peasplayer](https://github.com/Peasplayer) - An amazing developer who helped me a lot with this mod\
+[C.A 100](https://www.youtube.com/channel/UCyjXUVd_kmeMmQuxwM2Gwiw) - A talented artist who drew the button art for this mod\
+[Matux](https://matux.fr) - Allowing me to use his custom Among Us server
+
 #
 <p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
 <p align="center">© Innersloth LLC.</p>
