@@ -81,7 +81,8 @@ Meeting: Makes a random player who is not a Troll call an emergency meeting
 - Using the mod
   - Do not cover or remove the in-game credits
 - Using the source code
-  - If you publish the mod or a modified version of it, make sure to credit me
+  - Do not republish this mod
+  - If you publish a modified version of it, make sure to credit me
   
 #
 <p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
